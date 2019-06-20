@@ -1,0 +1,24 @@
+query {
+  user(login: "%s") {
+    pinnedRepositories(%s) {
+      totalCount
+      totalDiskUsage
+      edges {
+          cursor
+          node {
+              nameWithOwner
+              description
+              primaryLanguage{color, name}
+              stargazers{totalCount}
+              forkCount
+          }
+      }
+      pageInfo {
+        startCursor
+        endCursor
+        hasNextPage
+        hasPreviousPage
+      }
+    }
+  }
+}

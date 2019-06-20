@@ -1,0 +1,49 @@
+{
+  organization(login: "%s") {
+    login
+    teams(%s) {
+      totalCount
+      edges {
+        cursor
+        node {
+          avatarUrl
+          combinedSlug
+          createdAt
+          description
+          editTeamResourcePath
+          editTeamUrl
+          id
+          membersResourcePath
+          membersUrl
+          name
+          newTeamResourcePath
+          organization {
+              login
+          }
+          parentTeam{
+              name
+              url
+          }
+          privacy
+          repositoriesResourcePath
+          repositoriesUrl
+          resourcePath
+          slug
+          teamsResourcePath
+          teamsUrl
+          updatedAt
+          url
+          viewerCanAdminister
+          viewerCanSubscribe
+          viewerSubscription
+        }
+      }
+      pageInfo {
+        startCursor
+        endCursor
+        hasNextPage
+        hasPreviousPage
+      }
+    }
+  }
+}

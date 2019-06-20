@@ -1,0 +1,45 @@
+query {
+    organization(login: "%s") {
+        repository(name:"%s") {
+            issue(number:%s) {
+                activeLockReason
+                author { login }
+                authorAssociation
+                body
+                bodyHTML
+                bodyText
+                closed
+                closedAt
+                createdAt
+                createdViaEmail
+                databaseId
+                editor { login }
+                id
+                includesCreatedEdit
+                lastEditedAt
+                locked
+                milestone { title }
+                number
+                publishedAt
+                reactionGroups {
+                    content
+                    createdAt
+                    subject { databaseId, id }
+                    viewerHasReacted
+                }
+                repository { owner { login } }
+                resourcePath
+                state
+                title
+                updatedAt
+                url
+                viewerCanReact
+                viewerCanSubscribe
+                viewerCanUpdate
+                viewerCannotUpdateReasons
+                viewerDidAuthor
+                viewerSubscription
+            }
+        }
+  }
+}

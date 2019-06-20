@@ -1,0 +1,24 @@
+query {
+    user(login: "%s") {
+        gist(name: "%s") {
+            stargazers(%s) {
+                totalCount
+                edges {
+                    cursor
+                    node {
+                        login
+                    }
+                }
+                pageInfo {
+                    startCursor
+                    endCursor
+                    hasNextPage
+                    hasPreviousPage
+                }
+            }
+            owner {
+                login
+            }
+        }
+    }
+}

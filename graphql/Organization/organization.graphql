@@ -1,0 +1,37 @@
+query {
+  organization(login:"%s") {
+    avatarUrl
+    databaseId
+    description
+    email
+    id
+    isVerified
+    location
+    login
+    name
+    newTeamResourcePath
+    newTeamUrl
+    organizationBillingEmail
+    projectsResourcePath
+    projectsUrl
+    requiresTwoFactorAuthentication
+    resourcePath
+    samlIdentityProvider{
+        digestMethod,
+        id,
+        idpCertificate,
+        issuer,
+        signatureMethod,
+        ssoUrl
+    }
+    teamsResourcePath
+    teamsUrl
+    url
+    viewerCanAdminister
+    viewerCanCreateProjects
+    viewerCanCreateRepositories
+    viewerCanCreateTeams
+    viewerIsAMember
+    websiteUrl
+  }
+}

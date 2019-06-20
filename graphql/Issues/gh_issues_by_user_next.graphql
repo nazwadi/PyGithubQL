@@ -1,0 +1,55 @@
+query {
+    user(login: "%s") {
+        issues(first:100, after: "%s") {
+            totalCount
+            edges {
+                cursor
+                node {
+                    activeLockReason
+                    author { login }
+                    authorAssociation
+                    body
+                    bodyHTML
+                    bodyText
+                    closed
+                    closedAt
+                    createdAt
+                    createdViaEmail
+                    databaseId
+                    editor { login }
+                    id
+                    includesCreatedEdit
+                    lastEditedAt
+                    locked
+                    milestone { title }
+                    number
+                    publishedAt
+                    reactionGroups {
+                        content
+                        createdAt
+                        subject { databaseId, id }
+                        viewerHasReacted
+                    }
+                    repository { owner { login }, name }
+                    resourcePath
+                    state
+                    title
+                    updatedAt
+                    url
+                    viewerCanReact
+                    viewerCanSubscribe
+                    viewerCanUpdate
+                    viewerCannotUpdateReasons
+                    viewerDidAuthor
+                    viewerSubscription
+                }
+            }
+            pageInfo {
+                endCursor
+                hasNextPage
+                hasPreviousPage
+                startCursor
+            }
+          }
+    }
+}

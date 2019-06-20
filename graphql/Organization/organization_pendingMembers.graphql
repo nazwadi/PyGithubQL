@@ -1,0 +1,19 @@
+{
+    organization(login: "%s") {
+        pendingMembers(%s) {
+            totalCount
+            edges {
+                cursor
+                node {
+                    login
+                }
+            }
+            pageInfo {
+                endCursor
+                hasNextPage
+                hasPreviousPage
+                startCursor
+            }
+        }
+    }
+}

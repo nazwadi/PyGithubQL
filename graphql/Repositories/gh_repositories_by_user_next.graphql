@@ -1,0 +1,28 @@
+query {
+  user(login: "%s") {
+    repositories(first:100, after: "%s") {
+      totalCount
+      nodes {
+        owner {
+          login
+        }
+        name
+      }
+      edges {
+          cursor
+          node {
+              owner {
+                  login
+              }
+              name
+          }
+      }
+      pageInfo {
+        startCursor
+        endCursor
+        hasNextPage
+        hasPreviousPage
+      }
+    }
+  }
+}

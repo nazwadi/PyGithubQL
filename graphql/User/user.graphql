@@ -1,0 +1,29 @@
+query {
+    user(login: "%s") {
+        avatarUrl
+        bio
+        bioHTML
+        company
+        companyHTML
+        createdAt
+        databaseId
+        email
+        id
+        isBountyHunter
+        isCampusExpert
+        isDeveloperProgramMember
+        isEmployee
+        isHireable
+        isSiteAdmin
+        isViewer
+        location
+        login
+        name
+        resourcePath
+        updatedAt
+        url
+        viewerCanFollow
+        viewerIsFollowing
+        websiteUrl
+    }
+}

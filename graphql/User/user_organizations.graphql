@@ -1,0 +1,50 @@
+query {
+  user(login: "%s") {
+  organizations(%s) {
+    totalCount
+    edges {
+        cursor
+        node {
+            avatarUrl
+            databaseId
+            description
+            email
+            id
+            isVerified
+            location
+            login
+            name
+            newTeamResourcePath
+            newTeamUrl
+            organizationBillingEmail
+            projectsResourcePath
+            projectsUrl
+            resourcePath
+            samlIdentityProvider{
+                digestMethod,
+                id,
+                idpCertificate,
+                issuer,
+                signatureMethod,
+                ssoUrl
+            }
+            teamsResourcePath
+            teamsUrl
+            url
+            viewerCanAdminister
+            viewerCanCreateProjects
+            viewerCanCreateRepositories
+            viewerCanCreateTeams
+            viewerIsAMember
+            websiteUrl
+        }
+    }
+  pageInfo {
+    endCursor
+    hasNextPage
+    hasPreviousPage
+    startCursor
+  }
+  }
+}
+}

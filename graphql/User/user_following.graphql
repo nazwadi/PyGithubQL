@@ -1,0 +1,21 @@
+query {
+    user(login: "%s") {
+        login
+        following(%s) {
+            edges {
+                cursor
+                node {
+                    login
+                    email
+                }
+            }
+            pageInfo {
+                endCursor,
+                hasNextPage,
+                hasPreviousPage,
+                startCursor
+            }
+            totalCount
+        }
+    }
+}

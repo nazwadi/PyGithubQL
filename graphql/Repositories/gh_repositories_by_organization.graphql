@@ -1,0 +1,29 @@
+query {
+  organization(login: "%s") {
+    repositories(first:100) {
+      totalCount
+      totalDiskUsage
+      nodes {
+        owner {
+          login
+        }
+        name
+      }
+      edges {
+          cursor
+          node {
+              owner {
+                  login
+              }
+              name
+          }
+      }
+      pageInfo {
+        startCursor
+        endCursor
+        hasNextPage
+        hasPreviousPage
+      }
+    }
+  }
+}

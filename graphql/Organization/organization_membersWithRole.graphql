@@ -1,0 +1,20 @@
+{
+    organization(login: "%s") {
+        membersWithRole(%s) {
+            totalCount
+            edges {
+                cursor
+                node {
+                    login
+                }
+                role
+            }
+            pageInfo {
+                endCursor
+                hasNextPage
+                hasPreviousPage
+                startCursor
+            }
+        }
+    }
+}

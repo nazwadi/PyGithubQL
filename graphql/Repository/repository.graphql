@@ -1,0 +1,86 @@
+query {
+  repository(owner: "%s", name: "%s") {
+    codeOfConduct {
+      body
+      key
+      name
+      url
+    }
+    createdAt
+    databaseId
+    defaultBranchRef {
+      id
+      name
+      prefix
+    }
+    description
+    descriptionHTML
+    diskUsage
+    forkCount
+    hasIssuesEnabled
+    hasWikiEnabled
+    homepageUrl
+    id
+    isArchived
+    isFork
+    isLocked
+    isMirror
+    isPrivate
+    licenseInfo {
+      description
+      featured
+      hidden
+      id
+      implementation
+      key
+      limitations {
+          description
+          key
+          label
+      }
+      name
+      nickname
+      permissions {
+          description
+          key
+          label
+      }
+      pseudoLicense
+      spdxId
+      url
+    }
+    lockReason
+    mergeCommitAllowed
+    mirrorUrl
+    name
+    nameWithOwner
+    owner {
+      login
+    }
+    parent {
+      owner {
+        login
+      }
+    }
+    primaryLanguage {
+      color
+    }
+    projectsResourcePath
+    projectsUrl
+    pushedAt
+    rebaseMergeAllowed
+    resourcePath
+    shortDescriptionHTML
+    squashMergeAllowed
+    sshUrl
+    updatedAt
+    url
+    viewerCanAdminister
+    viewerCanCreateProjects
+    viewerCanSubscribe
+    viewerCanUpdateTopics
+    viewerHasStarred
+    viewerPermission
+    viewerSubscription
+  }
+}

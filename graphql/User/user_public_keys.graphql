@@ -1,0 +1,20 @@
+query {
+  user(login: "%s") {
+    publicKeys(%s) {
+      totalCount
+      edges {
+          cursor
+          node {
+              id
+              key
+          }
+      }
+      pageInfo {
+        startCursor
+        endCursor
+        hasNextPage
+        hasPreviousPage
+      }
+    }
+  }
+}

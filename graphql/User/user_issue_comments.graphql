@@ -1,0 +1,51 @@
+query {
+    user(login: "%s") {
+        issueComments(%s) {
+            totalCount
+            edges {
+                cursor
+                node {
+                    author { login }
+                    authorAssociation
+                    body
+                    bodyHTML
+                    bodyText
+                    createdAt
+                    createdViaEmail
+                    databaseId
+                    editor { login }
+                    id
+                    includesCreatedEdit
+                    isMinimized
+                    issue { title, number, repository { nameWithOwner } }
+                    lastEditedAt
+                    minimizedReason
+                    publishedAt
+                    pullRequest { title, number, url }
+                    reactionGroups {
+                        content
+                        createdAt
+                        subject { databaseId, id }
+                        viewerHasReacted
+                    }
+                    repository { owner { login }, name }
+                    resourcePath
+                    updatedAt
+                    url
+                    viewerCanDelete
+                    viewerCanMinimize
+                    viewerCanReact
+                    viewerCanUpdate
+                    viewerCannotUpdateReasons
+                    viewerDidAuthor
+                }
+            }
+            pageInfo {
+                endCursor
+                hasNextPage
+                hasPreviousPage
+                startCursor
+            }
+          }
+    }
+}

@@ -1,0 +1,23 @@
+query {
+  user(login: "%s") {
+    repositories(%s) {
+      totalCount
+      totalDiskUsage
+      edges {
+          cursor
+          node {
+              owner {
+                  login
+              }
+              name
+          }
+      }
+      pageInfo {
+        startCursor
+        endCursor
+        hasNextPage
+        hasPreviousPage
+      }
+    }
+  }
+}

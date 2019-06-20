@@ -1,0 +1,45 @@
+query {
+    user(login: "%s") {
+        login
+        gistComments(%s) {
+            edges {
+                cursor
+                node {
+                    author { login }
+                    authorAssociation
+                    body
+                    bodyHTML
+                    bodyText
+                    createdAt
+                    createdViaEmail
+                    databaseId
+                    editor { login }
+                    gist {
+                        id,
+                        name,
+                        owner { login }
+                        }
+                    id
+                    includesCreatedEdit
+                    isMinimized
+                    lastEditedAt
+                    minimizedReason
+                    publishedAt
+                    updatedAt
+                    viewerCanDelete
+                    viewerCanMinimize
+                    viewerCanUpdate
+                    viewerCannotUpdateReasons
+                    viewerDidAuthor
+                }
+            }
+            pageInfo {
+                endCursor,
+                hasNextPage,
+                hasPreviousPage,
+                startCursor
+            }
+            totalCount
+        }
+    }
+}

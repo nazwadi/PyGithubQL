@@ -1,0 +1,17 @@
+query {
+  user(login: "%s") {
+    gist(name: "%s") {
+      createdAt
+      description
+      id
+      isPublic
+      name
+      owner {
+        login
+      }
+      pushedAt
+      updatedAt
+      viewerHasStarred
+    }
+  }
+}

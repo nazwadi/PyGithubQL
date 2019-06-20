@@ -1,0 +1,53 @@
+query {
+    user(login: "%s") {
+        login
+        commitComments(%s) {
+            edges {
+                cursor
+                node {
+                    author { login }
+                    authorAssociation
+                    body
+                    bodyHTML
+                    bodyText
+                    commit { id, url }
+                    createdAt
+                    createdViaEmail
+                    databaseId
+                    editor { login }
+                    id
+                    includesCreatedEdit
+                    isMinimized
+                    lastEditedAt
+                    minimizedReason
+                    path
+                    position
+                    publishedAt
+                    reactionGroups {
+                        content,
+                        createdAt,
+                        subject { databaseId, id }
+                        viewerHasReacted
+                        }
+                    repository { name, url }
+                    resourcePath
+                    updatedAt
+                    url
+                    viewerCanDelete
+                    viewerCanMinimize
+                    viewerCanReact
+                    viewerCanUpdate
+                    viewerCannotUpdateReasons
+                    viewerDidAuthor
+                }
+            }
+            pageInfo {
+                endCursor,
+                hasNextPage,
+                hasPreviousPage,
+                startCursor
+            }
+            totalCount
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+  organization(login: "%s") {
+    login
+    projects(%s) {
+      totalCount
+      edges {
+        cursor
+        node {
+          body
+          bodyHTML
+          closed
+          closedAt
+          columns(first:100){totalCount}
+          createdAt
+          creator { login }
+          databaseId
+          id
+          name
+          number
+          owner{
+            id
+          }
+          pendingCards(first:100){totalCount}
+          resourcePath
+          state
+          updatedAt
+          url
+          viewerCanUpdate
+        }
+      }
+      pageInfo {
+        startCursor
+        endCursor
+        hasNextPage
+        hasPreviousPage
+      }
+    }
+  }
+}
+

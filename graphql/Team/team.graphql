@@ -1,0 +1,34 @@
+{
+  organization(login:"%s") {
+    team(slug:"%s"){
+          avatarUrl
+          combinedSlug
+          createdAt
+          description
+          editTeamResourcePath
+          editTeamUrl
+          id
+          membersResourcePath
+          membersUrl
+          name
+          newTeamResourcePath
+          newTeamUrl
+          organization{login, url}
+          parentTeam{name}
+          privacy
+          repositoriesResourcePath
+          repositoriesUrl
+          resourcePath
+          slug
+          teamsResourcePath
+          teamsUrl
+          updatedAt
+          url
+          viewerCanAdminister
+          viewerCanSubscribe
+          viewerSubscription
+        }
+    login
+    url
+  }
+}

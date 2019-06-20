@@ -1,0 +1,50 @@
+query {
+  user(login: \"%s\") {
+    gists(first:100) {
+      totalCount
+      nodes {
+        createdAt
+        description
+        isPublic
+        name
+        owner {
+          login
+        }
+        pushedAt
+        updatedAt
+        stargazers(first: 100) {
+          totalCount
+          nodes {
+            login
+          }
+          pageInfo {
+            startCursor
+            endCursor
+          }
+        }
+        comments(first:100) {
+          totalCount
+          nodes {
+            publishedAt
+            body
+            author {
+              login
+            }
+          }
+          pageInfo {
+            startCursor
+            endCursor
+            hasNextPage
+            hasPreviousPage
+          }
+        }
+      }
+      pageInfo {
+        startCursor
+        endCursor
+        hasNextPage
+        hasPreviousPage
+      }
+    }
+  }
+}

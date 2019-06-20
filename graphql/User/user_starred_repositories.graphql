@@ -1,0 +1,24 @@
+{
+  user(login: "%s") {
+    starredRepositories(%s) {
+      totalCount
+      edges {
+        cursor
+        starredAt
+        node {
+          name
+          owner { login }
+          url
+          updatedAt
+          createdAt
+        }
+      }
+      pageInfo {
+        startCursor
+        endCursor
+        hasNextPage
+        hasPreviousPage
+      }
+    }
+  }
+}

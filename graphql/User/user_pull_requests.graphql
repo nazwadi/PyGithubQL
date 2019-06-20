@@ -1,0 +1,25 @@
+query {
+  user(login: "%s") {
+    pullRequests(%s) {
+      totalCount
+      edges {
+          cursor
+          node {
+              author { login }
+              body
+              createdAt
+              number
+              repository { owner { login }, name }
+              title
+              url
+          }
+      }
+      pageInfo {
+        startCursor
+        endCursor
+        hasNextPage
+        hasPreviousPage
+      }
+    }
+  }
+}
